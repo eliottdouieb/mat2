@@ -6,20 +6,21 @@ def revword(word):
         count_pos_letter=count_pos_letter-1
     return result.strip().lower()
 
-##def countword():
-fm=open('C:/Users/eliot/Desktop/mat2/text.txt')
-word=""
-for row in fm:
-    word=row.strip()
-    break
-count=0
-for row in fm :
-    words=row.split()
-    for i in range(len(words)):
-        words[i]=revword(words[i])
-        if words[i]==word:
-            count=count+1
-print(count+1)
+def countword():
+    fm=open('C:/Users/eliot/Desktop/mat2/text.txt')
+    word=""
+    for row in fm:
+        word=row.strip()
+        break
+    count=0
+    for row in fm :
+        words=row.split()
+        for i in range(len(words)):
+            words[i]=revword(words[i])
+            if words[i]==word:
+                count=count+1
+    return count+1
+
 
 
 
